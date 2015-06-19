@@ -15,3 +15,8 @@
 /log/*
 !/log/.keep
 /tmp
+.idea
+public/uploads
+.env
+.DS_Store
+dump.rdb
