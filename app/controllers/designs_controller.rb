@@ -1,12 +1,19 @@
 class DesignsController < ApplicationController
+  def index
+    @designs = Design.all
+  end
+
   def show
     @design = Design.find params[:id]
   end
 
   def create
     @design = Design.new design_params
-    @design.save
-    redirect_to @design
+    if @design.save
+      redirect_to @design
+    else
+      render 'new'
+    end
   end
 
   def new

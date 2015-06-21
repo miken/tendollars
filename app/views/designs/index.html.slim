@@ -1,0 +1,14 @@
+h1 Designs
+
+table.table.table-striped
+  thead
+    tr
+      th Image
+      th Name
+      th Description
+  tbody
+    - @designs.each do |design|
+      tr
+        td = image_tag design.image.url(:thumb)
+        td = design.name
+        td = design.description
