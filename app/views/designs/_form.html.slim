@@ -2,4 +2,6 @@
   = f.input :name
   = f.input :description
   = f.input :image
-  = f.button :submit
+  - if @design.image.present?
+    p = image_tag @design.image.url(:thumb)
+  p = f.button :submit
