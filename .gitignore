@@ -16,7 +16,7 @@
 !/log/.keep
 /tmp
 .idea
-public/uploads
+public/system
 .env
 .DS_Store
 dump.rdb
