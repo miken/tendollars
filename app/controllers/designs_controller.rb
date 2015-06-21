@@ -33,6 +33,13 @@ class DesignsController < ApplicationController
     end
   end
 
+  def destroy
+    @design = Design.new design_params
+    @design.destroy
+
+    redirect_to designs_path
+  end
+
   private
     def design_params
       params.require(:design).permit(:name, :description, :image)
