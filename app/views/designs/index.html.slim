@@ -6,9 +6,13 @@ table.table.table-striped
       th Image
       th Name
       th Description
+      th Action
   tbody
     - @designs.each do |design|
       tr
         td = image_tag design.image.url(:thumb)
         td = design.name
         td = design.description
+        td
+          => link_to "Show", design_path(design)
+          => link_to "Edit", edit_design_path(design)

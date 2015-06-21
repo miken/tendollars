@@ -7,6 +7,23 @@ class DesignsController < ApplicationController
     @design = Design.find params[:id]
   end
 
+  def edit
+    @design = Design.find params[:id]
+  end
+
+  def update
+    @design = Design.find params[:id]
+    if @design.update design_params
+      redirect_to @design
+    else
+      render 'edit'
+    end
+  end
+
+  def new
+    @design = Design.new
+  end
+
   def create
     @design = Design.new design_params
     if @design.save
@@ -14,10 +31,6 @@ class DesignsController < ApplicationController
     else
       render 'new'
     end
-  end
-
-  def new
-    @design = Design.new
   end
 
   private

@@ -2,4 +2,6 @@ h2 = @design.name
 
 p = @design.description
 
-= image_tag @design.image.url(:medium)
+p = image_tag @design.image.url(:medium)
+
+p = link_to "Back to list of designs", designs_path
