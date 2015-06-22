@@ -49,4 +49,5 @@ gem 'bootstrap-sass', '~> 3.3.5'
 gem "paperclip", "~> 4.2"
 gem "simple_form"
 gem 'dotenv-rails', :groups => [:development, :test]
+gem 'rails_12factor', group: :production
 gem 'aws-sdk-v1'
