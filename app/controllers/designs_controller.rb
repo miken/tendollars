@@ -34,7 +34,7 @@ class DesignsController < ApplicationController
   end
 
   def destroy
-    @design = Design.new design_params
+    @design = Design.find params[:id]
     @design.destroy
 
     redirect_to designs_path

@@ -16,3 +16,6 @@ table.table.table-striped
         td
           => link_to "Show", design_path(design)
           => link_to "Edit", edit_design_path(design)
+          => link_to "Delete", design_path(design),
+                              method: :delete, class: 'text-danger',
+                              data: { confirm: 'Are you sure?' }
