@@ -1,7 +1,8 @@
-h2 HERE'S YOUR $10 BILL!
+.text-center
+  h2 HERE'S YOUR $10 BILL:
 
-p = @design.name
+  p = @design.name
 
-p = image_tag @design.image.url(:medium)
+  p = image_tag @design.image.url(:medium)
 
-p = link_to "I want another one!", "/"
+  p = link_to "I want another one!", new_design_path
