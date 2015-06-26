@@ -1,0 +1,15 @@
+head
+  title tendollars.me
+  = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+  = javascript_include_tag 'application', 'data-turbolinks-track' => true
+  = csrf_meta_tags
+
+  / Facebook meta tags
+  meta property="og:title" content="tendollars.me"
+  meta property="og:type" content="website"
+  meta property="og:image" content="/yodollar.jpg"
+  meta property="og:description" content="Let's put you on the $10 bill!"
+
+  / Twitter meta tags
+  meta name="twitter:description" content="Let's put you on the $10 bill!"
+  meta name="twitter:image" content="/yodollar.jpg"
