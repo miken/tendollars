@@ -1,12 +1,18 @@
 .design-form
+  .note.text-center
+    - if @design.image.present?
+      = image_tag @design.image.url(:medium)
+    - else
+      = image_tag "einstein_tenner.jpg"
+    
   = simple_form_for @design do |f|
     .row
       .col-md-6
-        = f.input :name
-        = f.input :description
+        = f.input :name, label: false, placeholder: "Give it a name"
+        = f.input :description, label: false, placeholder: "Say something about this note design"
       .col-md-6
         = f.input :image
-        - if @design.image.present?
-          p = image_tag @design.image.url(:medium)
     .top-pad
-    p.text-center = f.button :submit, class: "btn btn-lg btn-primary"
+    p = f.submit "Show me the money!", class: "btn btn-lg btn-primary", data: { disable_with: "Uploading image..."}
+  
+  p = link_to "Or show me home page", "/"

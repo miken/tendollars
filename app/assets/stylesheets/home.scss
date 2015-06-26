@@ -15,6 +15,10 @@ header {
   h1 { color: #fff }
 }
 
+.note {
+  margin: 30px;
+}
+
 .header-content {
   width: 100%;
   position: absolute;
@@ -27,9 +31,7 @@ header {
     margin-right: auto;
     max-width: 1000px;
   }
-  .note {
-    margin: 30px;
-  }
+
   .footer {
     margin: 30px 0;
     font-size: 12px;
