@@ -5,4 +5,9 @@
 
   p = image_tag @design.image.url(:medium)
 
-  p = link_to "I want another one!", new_design_path
+  p Use the links below to share with your friends:
+
+  p = facebook_button
+  p = twitter_button
+
+  p = link_to "I want to design another bill!", new_design_path

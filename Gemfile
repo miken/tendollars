@@ -51,3 +51,4 @@ gem "simple_form"
 gem 'dotenv-rails', :groups => [:development, :test]
 gem 'rails_12factor', group: :production
 gem 'aws-sdk-v1'
+gem 'shareable'
