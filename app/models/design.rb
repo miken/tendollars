@@ -3,7 +3,7 @@ class Design < ActiveRecord::Base
 
   has_attached_file :image,
     :styles => { 
-      :thumb => "x100",
+      :thumb => "100x100",
       :medium => "x300"
       },
     :convert_options => {
