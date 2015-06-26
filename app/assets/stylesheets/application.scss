@@ -1,8 +1,12 @@
 // Overriding bootstrap variables
-$link-color: #fff;
+$brand-primary: #4b884b;
+$input-border-focus: #4b884b;
 
 // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+// Custom
 @import "global";
 @import "home";
+@import "designs";

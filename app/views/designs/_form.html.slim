@@ -1,7 +1,12 @@
-= simple_form_for @design do |f|
-  = f.input :name
-  = f.input :description
-  = f.input :image
-  - if @design.image.present?
-    p = image_tag @design.image.url(:thumb)
-  p = f.button :submit
+.design-form
+  = simple_form_for @design do |f|
+    .row
+      .col-md-6
+        = f.input :name
+        = f.input :description
+      .col-md-6
+        = f.input :image
+        - if @design.image.present?
+          p = image_tag @design.image.url(:medium)
+    .top-pad
+    p.text-center = f.button :submit, class: "btn btn-lg btn-primary"

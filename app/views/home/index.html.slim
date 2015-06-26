@@ -1,8 +1,13 @@
 header
   .header-content
     .header-content-inner
-      h1 tendollars.me
+      h1
+        | TENDOLLARS
+        span style="color: #4b884b" .ME
       p 
         | Let's put you on the
-        =< link_to "next $10 bill", "http://www.nytimes.com/aponline/2015/06/17/us/politics/ap-us-woman-on-money.html"
-        | !
+        =< link_to "next $10 bill", "http://www.nytimes.com/aponline/2015/06/17/us/politics/ap-us-woman-on-money.html", target: '_blank'
+      .note
+        = image_tag "yodollar.jpg"
+
+      = link_to "Upload a photo", new_design_path, class: "btn btn-lg btn-primary"
