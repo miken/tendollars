@@ -2,6 +2,9 @@ class Design < ActiveRecord::Base
   validates :name, presence: true
   validates :image, presence: true
 
+  extend FriendlyId
+  friendly_id :slug_candidates, use: [:slugged, :finders]
+
   has_attached_file :image,
     :styles => { 
       :thumb => "100x100",
@@ -12,4 +15,11 @@ class Design < ActiveRecord::Base
     }
   validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
   validates_attachment_size :image, :less_than => 5.megabytes
+
+  def slug_candidates
+    [
+      :name,
+      [:name, :id]
+    ]
+  end
 end
